@@ -3,7 +3,7 @@ import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
 import { getInput } from "../../../reducer/reducer/actions";
 
 
-const ListFooterComponent = ({ navigation, TextInputField, dispatch}) => {
+const ListFooterComponent = ({ navigation, TextInputField, dispatch }) => {
     
     const handleCreateNew = () => {
         dispatch(getInput(''))
@@ -24,7 +24,7 @@ const ListFooterComponent = ({ navigation, TextInputField, dispatch}) => {
             </TouchableOpacity>
         </View>
     );
-}
+};
 
 const styles = StyleSheet.create({
     Container: {
