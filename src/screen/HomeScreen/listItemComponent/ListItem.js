@@ -5,6 +5,7 @@ import Swipeable from 'react-native-gesture-handler/Swipeable';
 import {delItem} from '../../../reducer/reducer/actions';
 
 const ListItem = ({item, index, navigation, state, func}) => {
+  console.log(item);
   const handleUpdate = () => {
     func(getInput(state[index]));
     func(getIndex(index));
