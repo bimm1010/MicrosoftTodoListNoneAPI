@@ -1,10 +1,11 @@
 import React from 'react';
-import {View, TouchableOpacity, StyleSheet, Text} from 'react-native';
-import {getInput, getIndex} from '../../../reducer/reducer/actions';
+import { View, TouchableOpacity, StyleSheet, Text } from 'react-native';
+import { getInput, getIndex } from '../../../reducer/reducer/actions';
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import Swipeable from 'react-native-gesture-handler/Swipeable';
-import {delItem} from '../../../reducer/reducer/actions';
+import { delItem } from '../../../reducer/reducer/actions';
 
-const ListItem = ({item, index, navigation, state, func}) => {
+const ListItem = ({ item, index, navigation, state, func }) => {
   console.log(item);
   const handleUpdate = () => {
     func(getInput(state[index]));
@@ -21,13 +22,15 @@ const ListItem = ({item, index, navigation, state, func}) => {
     );
   };
   return (
-    <Swipeable renderRightActions={rightSwipe}>
-      <View style={styles.Container}>
-        <TouchableOpacity onPress={handleUpdate}>
-          <Text>{item}</Text>
-        </TouchableOpacity>
-      </View>
-    </Swipeable>
+    <GestureHandlerRootView>
+      <Swipeable renderRightActions={rightSwipe}>
+        <View style={styles.Container}>
+          <TouchableOpacity onPress={handleUpdate}>
+            <Text>{item}</Text>
+          </TouchableOpacity>
+        </View>
+      </Swipeable>
+    </GestureHandlerRootView>
   );
 };
 
