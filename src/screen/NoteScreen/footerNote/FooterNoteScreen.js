@@ -20,8 +20,8 @@ const styles = StyleSheet.create({
     Container:{
         borderRadius: 10,
         backgroundColor: "gray",
-        marginHorizontal: 10,
-        marginBottom: 50,
+        marginHorizontal: "3%",
+        marginBottom: "5%",
         height: 45,
     }, 
     Text: {
