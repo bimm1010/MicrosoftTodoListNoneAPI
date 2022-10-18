@@ -10,9 +10,10 @@ const NoteMainScreen = () => {
     const [state, dispatch] = useContext(Context)
     const { TextInputField, ListTodo } = state
     console.log(ListTodo)
+    console.log(TextInputField)
 
     useEffect(() => {
-        const addToList = Keyboard.addListener("keyboardWillHide", () => {
+        const addToList = Keyboard.addListener("keyboardDidHide", () => {
             if (TextInputField) {
                 dispatch(addInput(TextInputField))
                 dispatch(getInput(''))

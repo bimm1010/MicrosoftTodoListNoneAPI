@@ -30,7 +30,8 @@ const styles = StyleSheet.create({
     Container: {
         flexDirection: "row",
         justifyContent: "space-between",
-        marginHorizontal: 35
+        marginHorizontal: "8%",
+        marginVertical: "5%"
     }
 })
 

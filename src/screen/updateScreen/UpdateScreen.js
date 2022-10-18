@@ -17,6 +17,8 @@ const UpdateScreen = () => {
                 updateTitle.remove();
             }
         })
+
+        
     }, [TextInputField]);
 
     return (
